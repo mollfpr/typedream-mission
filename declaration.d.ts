@@ -8,13 +8,7 @@ export interface BaseProps {
   [key: string]: unknown;
 }
 
-export type TypeElement =
-  | "title"
-  | "heading-1"
-  | "heading-2"
-  | "heading-3"
-  | "paragraph"
-  | "code";
+export type TypeElement = "title" | "paragraph" | "code";
 
 export type CustomEditor = BaseEditor & ReactEditor & HistoryEditor;
 
