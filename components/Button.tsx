@@ -20,7 +20,7 @@ const Button = React.forwardRef(function Button(
       ref={ref}
       className={cx(
         className,
-        "cursor-pointer flex items-center justify-center p-1.5 transition-colors hover:bg-gray-200",
+        "cursor-pointer flex items-center p-1.5 transition-colors hover:bg-gray-100",
         active ? "text-blue-500" : "text-black"
       )}
     ></span>

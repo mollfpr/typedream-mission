@@ -9,7 +9,6 @@ import DefaultElement from "../components/DefaultElement";
 import HoveringToolbar from "../components/HoveringToolbar";
 import Leaf from "../components/Leaf";
 import TitleElement from "../components/TitleElement";
-import { withLayout } from "../hooks/withLayout";
 
 const Home: NextPage = () => {
   const initialValue: Descendant[] = [
@@ -45,8 +44,7 @@ const Home: NextPage = () => {
   ];
   const [value, setValue] = useState(initialValue);
   const editorRef = useRef<Editor>();
-  if (!editorRef.current)
-    editorRef.current = withLayout(withReact(createEditor()));
+  if (!editorRef.current) editorRef.current = withReact(createEditor());
   const editor = editorRef.current;
 
   const renderElement = useCallback((props: RenderElementProps) => {

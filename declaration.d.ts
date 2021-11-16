@@ -8,15 +8,14 @@ export interface BaseProps {
   [key: string]: unknown;
 }
 
-export type TypeElement = "title" | "paragraph" | "code";
+export type TypeElement = "title" | "paragraph";
 
 export type CustomEditor = BaseEditor & ReactEditor & HistoryEditor;
 
 export type TitleElement = { type: "title"; children: Descendant[] };
 export type ParagraphElement = { type: "paragraph"; children: CustomText[] };
-export type CodeElement = { type: "code"; children: CustomText[] };
 
-export type CustomElement = TitleElement | ParagraphElement | CodeElement;
+export type CustomElement = TitleElement | ParagraphElement;
 
 export type FormattedText = {
   text: string;

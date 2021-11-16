@@ -7,7 +7,7 @@ export default function TitleElement({
 }: RenderElementProps) {
   return (
     <h2
-      className="text-2xl font-bold leading-7 text-gray-900 mb-2 sm:text-3xl sm:truncate"
+      className="text-2xl font-bold leading-7 text-gray-900 mb-2"
       {...attributes}
     >
       {children}
