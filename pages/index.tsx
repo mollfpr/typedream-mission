@@ -29,6 +29,15 @@ const Home: NextPage = () => {
       type: "paragraph",
       children: [
         {
+          text: "This also have a hover toolbar!",
+          code: true,
+        },
+      ],
+    },
+    {
+      type: "paragraph",
+      children: [
+        {
           text: "They found Mary, as usual, deep in the study of thorough-bass and human nature; and had some extracts to admire, and some new observations of threadbare morality to listen to. Catherine and Lydia had information for them of a different sort.",
         },
       ],
@@ -81,7 +90,9 @@ const Home: NextPage = () => {
           </a>
 
           <Slate editor={editor} value={value} onChange={setValue}>
-            <HoveringToolbar />
+            <div>
+              <HoveringToolbar />
+            </div>
             <Editable
               renderElement={renderElement}
               renderLeaf={(props) => <Leaf {...props} />}

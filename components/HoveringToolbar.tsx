@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import { Editor, Range } from "slate";
 import { ReactEditor, useSlate } from "slate-react";
 import FormatButton from "./FormatButton";
-import Menu from "./Menu";
 import Portal from "./Portal";
 
 export default function HoveringToolbar() {
@@ -39,7 +38,7 @@ export default function HoveringToolbar() {
 
   return (
     <Portal>
-      <Menu
+      <div
         ref={ref}
         className={cx(
           "rounded bg-white shadow border border-gray-200 transition-opacity opacity-0",
@@ -49,6 +48,10 @@ export default function HoveringToolbar() {
             top: -10000px;
             left: -10000px;
             margin-top: -6px;
+
+            & > * {
+              display: inline-block;
+            }
           `
         )}
       >
@@ -56,7 +59,7 @@ export default function HoveringToolbar() {
         <FormatButton format="italic" icon="format_italic" />
         <FormatButton format="underlined" icon="format_underlined" />
         <FormatButton format="code" icon="code" />
-      </Menu>
+      </div>
     </Portal>
   );
 }
